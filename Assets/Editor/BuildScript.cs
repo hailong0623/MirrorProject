@@ -17,7 +17,13 @@ public class BuildScript
     public static void BuildWindowsServer()
     {
         BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions();
-        buildPlayerOptions.scenes = new[] { "Assets/Scenes/Main.unity" };
+        // buildPlayerOptions.scenes = new[] { "Assets/Scenes/Main.unity" };
+        buildPlayerOptions.scenes = new[]
+        {
+            "Assets/Mirror/Examples/Room/Scenes/OfflineScene.unity" ,
+            "Assets/Mirror/Examples/Room/Scenes/RoomScene.unity" ,
+            "Assets/Mirror/Examples/Room/Scenes/OnlineScene.unity" ,
+        };
         buildPlayerOptions.locationPathName = "Builds/Windows/Server/Server.exe";
         buildPlayerOptions.target = BuildTarget.StandaloneWindows64;
         buildPlayerOptions.options = BuildOptions.CompressWithLz4HC | BuildOptions.EnableHeadlessMode;
